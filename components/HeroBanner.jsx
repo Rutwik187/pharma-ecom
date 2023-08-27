@@ -45,7 +45,7 @@ const HeroBanner = ({ heroBanner }) => {
               <div key={index} className="embla__slide">
                 <a target="_blank" href={item.linkTo}>
                   <img
-                    className="rounded-xl"
+                    className="rounded md:rounded-xl"
                     src={urlFor(item.image).url()}
                     alt=""
                   />

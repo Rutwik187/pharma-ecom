@@ -7,7 +7,7 @@ const Category = ({ category: { image, categoryName, slug } }) => {
   return (
     <div>
       <Link href={`/category/${slug.current}`}>
-        <div className="block group w-20 md:w-40 cursor-pointer m-2">
+        <div className="block group w-28 md:w-40 cursor-pointer m-2 ">
           <img
             src={urlFor(image).url()}
             alt=""

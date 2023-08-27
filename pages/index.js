@@ -28,7 +28,7 @@ const Home = ({ miniBannerData, featureProductsData, bannerData, categories, pro
 
       </div>
 
-      <div className="flex flex-wrap gap-5  px-5 md:px-0 items-center justify-center">
+      <div className="flex flex-wrap gap-5  px-5 md:px-0 items-start justify-center ">
         {categories?.map((category) => <Category key={category._id} category={category} />)}
       </div>
     </div>

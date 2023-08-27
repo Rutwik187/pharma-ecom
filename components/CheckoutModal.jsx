@@ -97,10 +97,14 @@ export default function CheckoutModal({
     if (response.statusCode === 500) return;
     const data = await response.json();
 
-    // for new tab
-    const checkoutUrl = `https://checkout.stripe.com/c/pay/${data.id}`;
-    window.open(checkoutUrl, "_blank");
-    //
+    // toast.loading("Redirecting...");
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+
+    // window.open(
+    //   "/",
+    //   "_blank" // <- This is what makes it open in a new window.
+    // );
 
     window.location.href = "/success";
   };
