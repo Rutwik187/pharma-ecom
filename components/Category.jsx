@@ -11,7 +11,7 @@ const Category = ({ category: { image, categoryName, slug } }) => {
           <img
             src={urlFor(image).url()}
             alt=""
-            className="object-cover w-full transition duration-500 group-hover:scale-105 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] hover:shadow-lg p-3 rounded-lg"
+            className=" w-40 h-32 object-contain transition duration-500 group-hover:scale-105 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] hover:shadow-lg p-3 rounded-lg"
           />
 
           <div className="mt-3">

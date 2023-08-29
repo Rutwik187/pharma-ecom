@@ -106,7 +106,7 @@ export default function CheckoutModal({
     //   "_blank" // <- This is what makes it open in a new window.
     // );
 
-    window.location.href = "/success";
+    // window.location.href = "/success";
   };
 
   // const handleCheckout = async () => {
