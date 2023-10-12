@@ -60,6 +60,18 @@ export default {
             validation: Rule => Rule.required(),
         },
         {
+            name: "freeDelivery",
+            title: "Free order on cart value above",
+            type: "number",
+
+        },
+        {
+            name: "deliveryCharges",
+            title: "Delivery Charges",
+            type: "number",
+
+        },
+        {
             name: 'addressUrl',
             title: 'Google Maps Url',
             type: "url"
