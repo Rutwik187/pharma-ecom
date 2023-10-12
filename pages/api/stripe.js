@@ -2,6 +2,7 @@ import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 
+
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
@@ -15,41 +16,40 @@ export default async function handler(req, res) {
                 shipping_options: [
                     { shipping_rate: 'shr_1Ng6vSSIzgCNqydLJ45tDZ4n' },
                 ],
-                // line_items: req.body.map((item) => {
-                //     const img = item.image[0].asset._ref;
-                //     const newImage = img.replace('image-', 'https://cdn.sanity.io/images/vfxfwnaw/production/').replace('-webp', '.webp');
 
-                //     return {
-                //         price_data: {
-                //             currency: 'usd',
-                //             product_data: {
-                //                 name: item.name,
-                //                 images: [newImage],
-                //             },
-                //             unit_amount: item.price * 100,
-                //         },
-                //         adjustable_quantity: {
-                //             enabled: true,
-                //             minimum: 1,
-                //         },
-                //         quantity: item.quantity
-                //     }
-                // }),
+                line_items: req.body.cartItems.map((item) => {
 
 
-                line_items: [
-                    {
+                    return {
                         price_data: {
                             currency: 'inr',
                             product_data: {
-                                name: 'items',
+                                name: item.name,
 
                             },
-                            unit_amount: Math.round(price * 100), // Convert to cents
+                            unit_amount: Math.round(item.discountedPrice * 100),
                         },
-                        quantity: 1, // You can adjust the quantity as needed
-                    },
-                ],
+                        adjustable_quantity: {
+                            enabled: true,
+                            minimum: 1,
+                        },
+                        quantity: item.count
+                    }
+                }),
+
+
+                // line_items: [
+                //     {
+                //         price_data: {
+                //             currency: 'inr',
+                //             product_data: {
+                //                 name: 'items',
+                //             },
+                //             unit_amount: Math.round(price * 100), // Convert to cents
+                //         },
+                //         quantity: 1, // You can adjust the quantity as needed
+                //     },
+                // ],
 
                 success_url: `${url}`,
                 cancel_url: `${req.headers.origin}/canceled`,

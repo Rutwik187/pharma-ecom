@@ -6,6 +6,9 @@ import { useSelector } from "react-redux";
 
 import getStripe from "../lib/getStripe";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -98,44 +101,20 @@ export default function CheckoutModal({
         Accept: "application/json",
       },
       // body: JSON.stringify(cartItems),
-      body: JSON.stringify({ subTotal: subTotal, url: whatsappURL }),
+      body: JSON.stringify({
+        subTotal: subTotal,
+        url: whatsappURL,
+        cartItems: cart,
+      }),
     });
 
     if (response.statusCode === 500) return;
     const data = await response.json();
 
-    // toast.loading("Redirecting...");
+    toast.loading("Redirecting...", { position: "bottom-right" });
 
     stripe.redirectToCheckout({ sessionId: data.id });
-
-    // window.open(
-    //   "/",
-    //   "_blank" // <- This is what makes it open in a new window.
-    // );
-
-    // window.location.href = "/success";
   };
-
-  // const handleCheckout = async () => {
-  //   const stripe = await getStripe();
-
-  //   const response = await fetch("/api/stripe", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //     // body: JSON.stringify(cartItems),
-  //     body: subTotal,
-  //   });
-
-  //   if (response.statusCode === 500) return;
-  //   const data = await response.json();
-
-  //   // toast.loading("Redirecting...");
-
-  //   stripe.redirectToCheckout({ sessionId: data.id });
-  // };
 
   return (
     <div>
