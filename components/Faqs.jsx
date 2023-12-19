@@ -66,7 +66,6 @@ const Faqs = () => {
             <details
               key={index}
               className="group border-s-4 border-blue-5=600 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
-              open
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                 <h2 className="text-lg font-medium text-gray-900">

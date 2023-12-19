@@ -10,6 +10,7 @@ import { IconContext } from "react-icons";
 import Features from '../components/Features';
 import Counters from '../components/Counters';
 import Faqs from '../components/Faqs';
+import Certificate from '../components/Certificate';
 
 
 
@@ -66,6 +67,19 @@ const Home = ({ miniBannerData, featureProductsData, bannerData, categories, pro
 
       <Brands brands={brandData} />
     </div>
+
+    {/* Certifications*/}
+    <div className='w-full  px-5 md:px-10 mx-auto'>
+      <div className="text-center max-w-[800px] mx-auto mb-[10px] mt-[30px] md:mb-[30px] md:mt-[60px]">
+        <h2 className='text-[28px] md:text-[34px]  font-semibold leading-tight mb-4'>Certificates</h2>
+        <Certificate />
+
+
+      </div>
+
+
+    </div>
+
     <Footer info={infoData} />
     <a target='_blank' href={`https://wa.me/91${infoData[0].phoneNo}?`}>
 

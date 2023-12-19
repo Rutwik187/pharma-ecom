@@ -23,7 +23,7 @@ const Layout = ({ children, infoData, products }) => {
   return (
     <div className="layout">
       <Head>
-        <title>Priyam Pharmacy</title>
+        <title>Meditune Lifesciences</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

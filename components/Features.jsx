@@ -40,13 +40,12 @@ const Features = () => {
 
                 <div className="mt-4 md:mx-4 md:mt-0">
                   <h1 className="text-xl font-semibold text-gray-700 capitalize ">
-                    Fast Delivery
+                    Premium Quality Products
                   </h1>
 
                   <p className="mt-3 text-gray-500 ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident ab nulla quod dignissimos vel non corrupti
-                    doloribus voluptatum eveniet
+                    Elevate your beauty routine with our premium, high-quality
+                    hair and skincare essentials for radiant results.
                   </p>
                 </div>
               </div>
@@ -71,13 +70,12 @@ const Features = () => {
 
                 <div className="mt-4 md:mx-4 md:mt-0">
                   <h1 className="text-xl font-semibold text-gray-700 capitalize ">
-                    Easy Payment
+                    Convenient Home Delivery
                   </h1>
 
                   <p className="mt-3 text-gray-500 ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident ab nulla quod dignissimos vel non corrupti
-                    doloribus voluptatum eveniet
+                    Enjoy the ease of shopping from home, and have your favorite
+                    products delivered directly to your doorstep, hassle-free.
                   </p>
                 </div>
               </div>
@@ -108,13 +106,13 @@ const Features = () => {
 
                 <div className="mt-4 md:mx-4 md:mt-0">
                   <h1 className="text-xl font-semibold text-gray-700 capitalize ">
-                    100% Authentic
+                    Secure and Seamless Shopping
                   </h1>
 
                   <p className="mt-3 text-gray-500 ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident ab nulla quod dignissimos vel non corrupti
-                    doloribus voluptatum eveniet
+                    Shop confidently on our user-friendly platform, with secure
+                    payments, and reliable customer support for a seamless
+                    online experience.
                   </p>
                 </div>
               </div>
@@ -123,7 +121,7 @@ const Features = () => {
             <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
               <img
                 className="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
-                src="https://media.istockphoto.com/id/1036131880/photo/efficient-pharmacy-operations-thanks-to-teamwork.jpg?s=612x612&w=0&k=20&c=JQPtkW7j14dvFWeLd6JlltULHMw07rJdi5ey7QLqCHc="
+                src="https://globalnews.ca/wp-content/uploads/2020/02/gettyimages-921950686.jpg?quality=85&strip=all&w=1200"
                 alt="img"
               />
             </div>
