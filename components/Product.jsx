@@ -8,9 +8,7 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import { asset } from "../temp_assets/flat-design-online-shop-logo-collection/5354481.jpg";
 
 const Product = ({ product }) => {
   const notify = () => {
