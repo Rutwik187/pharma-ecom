@@ -92,28 +92,34 @@ export default function CheckoutModal({
       setAddressError("");
     }
 
-    const stripe = await getStripe();
+    window.open(
+      whatsappURL,
+      "_blank" // <- This is what makes it open in a new window.
+    );
+    window.location.href = "/success";
 
-    const response = await fetch("/api/stripe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      // body: JSON.stringify(cartItems),
-      body: JSON.stringify({
-        subTotal: subTotal,
-        url: whatsappURL,
-        cartItems: cart,
-      }),
-    });
+    // const stripe = await getStripe();
 
-    if (response.statusCode === 500) return;
-    const data = await response.json();
+    // const response = await fetch("/api/stripe", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   // body: JSON.stringify(cartItems),
+    //   body: JSON.stringify({
+    //     subTotal: subTotal,
+    //     url: whatsappURL,
+    //     cartItems: cart,
+    //   }),
+    // });
 
-    toast.loading("Redirecting...", { position: "bottom-right" });
+    // if (response.statusCode === 500) return;
+    // const data = await response.json();
 
-    stripe.redirectToCheckout({ sessionId: data.id });
+    // toast.loading("Redirecting...", { position: "bottom-right" });
+
+    // stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   return (
