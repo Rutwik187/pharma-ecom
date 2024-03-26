@@ -70,9 +70,7 @@ export default function CheckoutModal({
               } = ₹${product.count * product.discountedPrice}`
           )
           .join("\n") +
-        `\n\n Coupon Code: ${coupon} \n Coupon Discount : ₹${couponDiscount} \n Delivery Charges : ₹${deliveryCharge}  \n\n Subtotal: ${
-          subTotal + deliveryCharge
-        }\n` +
+        `\n\n Subtotal: ${subTotal + deliveryCharge}\n` +
         `\n 🏡 Address: ${address.current.value}\n ☎️  Phone No.: ${phoneNo.current.value} \n 🙎 Name: ${name.current.value}`
     );
 
